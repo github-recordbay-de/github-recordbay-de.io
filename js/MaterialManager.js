@@ -6,6 +6,7 @@ let coatMat, PostersMat;
 var kartonColor
 let kartonMat;
 let jungleVidTex;
+let jungleVidAlpha;
 function ChangeMaterialProperties() {
 
     var redBay = new BABYLON.Color3.FromHexString("#ea1e1e");
@@ -38,11 +39,23 @@ function ChangeMaterialProperties() {
             jungleVidTex.video.addEventListener('ended', (event) => {
                 console.log('Video Stopped');
               });
-
             jungleVidTex.vScale = -1;
+            
+
+            jungleVidAlpha = new BABYLON.VideoTexture("video", "assets/211108_Katjes_UV_Alpha_02_DE.mp4", scene, true);
+            jungleVidAlpha.video.pause();
+            jungleVidAlpha.video.loop=false;
+            jungleVidAlpha.video.addEventListener('ended', (event) => {
+                console.log('Video Stopped');
+              });
+            jungleVidAlpha.vScale = -1;
+            jungleVidAlpha.getAlphaFromRGB =true
+
+            mat.opacityTexture = jungleVidAlpha;
             mat.albedoTexture = jungleVidTex;
 
             mat.metallic = 1;
+            mat.transparencyMode = 2
             //mat.emissiveColor = new BABYLON.Color3.FromHexString("#FFFFFF")
         }
     }

@@ -17,9 +17,13 @@ document.getElementById("vidElem").addEventListener("mousedown", (event)=>{
 function CloseBox(){
     jungleVidTex.video.pause();
     jungleVidTex.video.currentTime = 0
+
+    jungleVidAlpha.video.pause();
+    jungleVidAlpha.video.currentTime = 0
 }
 
 
 function playJungleVid(){
     jungleVidTex.video.play();
+    jungleVidAlpha.video.play();
 }

@@ -37,7 +37,7 @@ var onImageUpdated = function(e) {
     UpdateObj(e)
 };
 
-var factor=0.045;
+var factor=0.041;
 var onImageFound = function(e) {
 
     document.getElementById("trackState").style.backgroundColor = "green"
