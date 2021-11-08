@@ -40,6 +40,7 @@ var onImageUpdated = function(e) {
 var factor=0.045;
 var onImageFound = function(e) {
 
+    document.getElementById("trackState").style.backgroundColor = "green"
     UpdateObj(e);
     playJungleVid();
     // All_AR.position.copyFrom(e.position)
@@ -61,9 +62,11 @@ function UpdateObj(e){
     Karton_P.scaling = new BABYLON.Vector3(e.scale*factor, e.scale*factor,e.scale*factor);
 }
 var onImageLost = function(e) {
+    document.getElementById("trackState").style.backgroundColor = "red"
 };
 
 var onImageScanning = function(e){
+    document.getElementById("trackState").style.backgroundColor = "blue"
     console.log("scanning!!!")
 }
 
