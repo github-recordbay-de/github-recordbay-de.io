@@ -56,6 +56,7 @@ function ChangeMaterialProperties() {
 
             mat.metallic = 1;
             mat.transparencyMode = 2
+            mat.unlit = true
             //mat.emissiveColor = new BABYLON.Color3.FromHexString("#FFFFFF")
         }
     }
