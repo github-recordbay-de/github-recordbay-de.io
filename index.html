@@ -65,14 +65,17 @@
     <!--UIS-->
     <div class="UI">
         <div class= "UI-Holder">
-            <div id="vidElem" class = "boxUI">
+            <div id="vidElem" class = "boxUI" onclick="TruePlayVid()">
                 <i class="material-icons">play_circle_filled</i>
             </div>
             <div id="trackState" class = "boxUI">
             </div>
         </div>
-    </div>
+    </div>    
     
+    <video id="tracking-vid" style="display:none"  src="assets/vide_katjes_handbrake.mp4"></video>
+    <video id="alpha-vid" style="display:none"  src="assets/211108_Katjes_UV_Alpha_02_DE.mp4" muted></video>
+
     <canvas id="renderCanvas"></canvas>
     <script type="text/javascript" src='js/HelperFunctions.js'></script>
     <script type="text/javascript" src='js/MeshLoaderCtrl.js'></script>
