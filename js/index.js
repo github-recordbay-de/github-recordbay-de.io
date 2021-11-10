@@ -118,7 +118,6 @@ function loadVideo() {
         if (!videoLoaded) {
             alert('Video Loaded');
             videoLoaded = true;
-            fakePlayVid();
 
         }
     });
@@ -132,6 +131,7 @@ function loadVideo() {
 }
 
 function fakePlayVid() {
+    alert("fake play");
     document.getElementById("tracking-vid").play();
     document.getElementById("tracking-vid").pause();
     document.getElementById("tracking-vid").volume = 0;
